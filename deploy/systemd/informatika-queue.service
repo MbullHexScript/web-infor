@@ -1,0 +1,16 @@
+[Unit]
+Description=Informatika Laravel Queue Worker
+After=network.target postgresql.service
+
+[Service]
+User=deploy
+Group=www-data
+Restart=always
+RestartSec=5
+WorkingDirectory=/var/www/informatika/current
+ExecStart=/usr/bin/php artisan queue:work database --sleep=3 --tries=3 --max-time=3600
+StandardOutput=append:/var/log/informatika-queue.log
+StandardError=append:/var/log/informatika-queue-error.log
+
+[Install]
+WantedBy=multi-user.target

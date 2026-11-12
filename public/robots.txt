@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/login
+Disallow: /preview
+Disallow: /storage/private
+
+Sitemap: https://informatika.uinbanten.ac.id/sitemap.xml

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://localhost/id</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/id/profil</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en/profile</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/id/akademik/kurikulum</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en/academics/curriculum</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/id/informasi</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en/information</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/id/riset</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en/research</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/id/kemahasiswaan</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en/student-life</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/id/fasilitas</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en/facilities</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/id/pmb</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en/admissions</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/id/kontak</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>http://localhost/en/contact</loc><lastmod>2026-10-27</lastmod></url>
+</urlset>

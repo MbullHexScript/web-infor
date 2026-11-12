@@ -1,0 +1,1 @@
+* * * * * deploy cd /var/www/informatika/current && /usr/bin/php artisan schedule:run >> /var/log/informatika-scheduler.log 2>&1
