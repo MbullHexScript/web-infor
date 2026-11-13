@@ -19,7 +19,7 @@ export default function VisionMissionPage({
                 }
                 description={page.excerpt_id ?? ''}
             />
-            <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto max-w-7xl px-4 py-10 sm:px-6">
                 <VisionMissionSection page={page} locale={locale} />
             </div>
         </ProfileShell>

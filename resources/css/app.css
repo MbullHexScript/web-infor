@@ -2,6 +2,390 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Public-only visual tokens. Admin/auth retain the original global palette. */
+.public-site {
+    --public-surface: #ffffff;
+    --public-muted: #666b73;
+    --public-tint: #f1edf7;
+    --public-action: #5a4477;
+    --public-on-action: #ffffff;
+    --public-control-border: #85808d;
+    --public-focus: #5a4477;
+    --color-graphite: #535963;
+    --radius-sm: 0.75rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --shadow-sm: 0 2px 8px rgb(23 27 33 / 0.03);
+    --shadow-md: 0 8px 24px rgb(23 27 33 / 0.06);
+    --shadow-lg: 0 20px 48px rgb(23 27 33 / 0.12);
+    --shadow-glow: 0 8px 24px rgb(23 27 33 / 0.06);
+    line-height: 1.65;
+}
+
+.dark .public-site {
+    --public-surface: #1c2128;
+    --public-muted: #b8bec8;
+    --public-tint: #292331;
+    --public-action: #c9b8e6;
+    --public-on-action: #171b21;
+    --public-control-border: #8b8497;
+    --public-focus: #c9b8e6;
+    --color-graphite: #b8bec8;
+}
+
+.public-site :focus-visible {
+    outline-color: var(--public-focus);
+}
+
+.public-site main :where(h1, h2, h3) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+.public-site main :where(.font-black) {
+    font-weight: 600;
+}
+
+.public-site main :where(h1) {
+    font-size: clamp(2.25rem, 4.5vw, 4rem);
+    line-height: 1.1;
+}
+
+.public-site .public-logo {
+    border-color: var(--color-silver);
+    box-shadow: none;
+}
+
+.public-site .public-language {
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+.public-site main :where(table) {
+    background: var(--public-surface);
+}
+
+.public-site main :where(th) {
+    color: var(--color-charcoal);
+    font-weight: 600;
+}
+
+.public-site main :where(td, th) {
+    border-color: var(--color-silver);
+}
+
+.public-site main :where(a, button) {
+    text-underline-offset: 0.25em;
+}
+
+.public-site :where(input:not([type='checkbox']):not([type='radio']), select, textarea) {
+    background-color: var(--public-surface);
+    border-color: var(--public-control-border);
+    color: var(--color-charcoal);
+    border-radius: 0.75rem;
+    min-height: 2.75rem;
+}
+
+.public-site :where(input, textarea)::placeholder {
+    color: var(--public-muted);
+    opacity: 1;
+}
+
+.public-site .public-card {
+    background-color: var(--public-surface);
+    border-color: var(--color-silver);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.public-site :where(.text-brand-purple) {
+    color: var(--color-purple-deep);
+}
+
+.public-site a.public-card:hover,
+.public-site article.public-card:focus-within {
+    border-color: var(--public-control-border);
+    box-shadow: var(--shadow-md);
+}
+
+.dark .public-site .public-card,
+.dark .public-site .public-navbar,
+.dark .public-site .public-dropdown {
+    background-color: var(--public-surface);
+    border-color: var(--color-silver);
+}
+
+.public-site .public-button-primary {
+    background: var(--public-action);
+    color: var(--public-on-action);
+    border-radius: 9999px;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+.public-site .public-button-secondary {
+    border-color: var(--public-control-border);
+    border-radius: 9999px;
+    font-weight: 600;
+}
+
+.public-site .public-button-primary:hover {
+    filter: brightness(1.08);
+}
+
+.public-site .public-control {
+    background-color: var(--public-surface);
+    border-color: var(--color-silver);
+    border-radius: 9999px;
+    box-shadow: none;
+    color: var(--color-charcoal);
+}
+
+.public-site .public-control:hover {
+    background-color: var(--public-tint);
+    border-color: var(--public-control-border);
+}
+
+.public-site .public-navbar {
+    background-color: var(--public-surface);
+    border-color: var(--color-silver);
+    box-shadow: none;
+}
+
+.public-site .public-navigation :where(a) {
+    font-weight: 500;
+}
+
+.public-site .public-navigation > a {
+    background: var(--public-tint);
+    box-shadow: none;
+}
+
+.public-site .public-dropdown {
+    background-color: var(--public-surface);
+    border-color: var(--color-silver);
+    box-shadow: var(--shadow-lg);
+    border-radius: 1rem;
+}
+
+.public-site .public-search-panel {
+    padding: 1.5rem;
+    border: 1px solid var(--color-silver);
+    background: var(--public-surface);
+}
+
+.public-site .public-footer {
+    background-color: var(--public-surface);
+    border-color: var(--color-silver);
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+}
+
+.public-site .public-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+/* Full-width section bands share the inset of the existing max-w-7xl shells. */
+.public-site .public-section > .relative.mx-auto {
+    max-width: 77rem;
+}
+
+.public-site .public-section-title {
+    font-size: clamp(1.875rem, 3.25vw, 3rem);
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.public-site .public-section-description {
+    max-width: 65ch;
+    color: var(--public-muted);
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.public-site .public-page-hero {
+    background-color: var(--public-surface);
+    border-color: var(--color-silver);
+}
+
+.public-site .public-page-hero > div {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.public-site .public-page-hero h1 {
+    color: var(--color-charcoal);
+    font-size: clamp(2.25rem, 4.5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+}
+
+.public-site .public-page-hero p {
+    max-width: 65ch;
+}
+
+.public-site .public-page-hero p:not(.uppercase) {
+    color: var(--public-muted);
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.public-site .public-prose {
+    max-width: 72ch;
+    line-height: 1.8;
+}
+
+.public-site .public-prose :where(p, ul, ol, blockquote, table) {
+    margin-block: 1.25rem;
+}
+
+.public-site .public-prose :where(h2, h3) {
+    margin-block: 2rem 1rem;
+    line-height: 1.25;
+}
+
+.public-site .public-prose h2 {
+    font-size: 1.75rem;
+}
+
+.public-site .public-prose h3 {
+    font-size: 1.375rem;
+}
+
+.public-site .public-prose :where(ul, ol) {
+    padding-left: 1.5rem;
+}
+
+.public-site .public-prose ul {
+    list-style: disc;
+}
+
+.public-site .public-prose ol {
+    list-style: decimal;
+}
+
+.public-site .public-prose a {
+    color: var(--color-purple-deep);
+    text-decoration: underline;
+}
+
+.public-site .public-prose blockquote {
+    border-left: 3px solid var(--color-fst-lavender);
+    padding-left: 1.25rem;
+}
+
+.public-site .public-tabs [role='tab'] {
+    flex-shrink: 0;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+.public-site .public-tabs [aria-selected='true'] {
+    background: var(--public-action);
+    color: var(--public-on-action);
+    border-color: var(--public-action);
+}
+
+.public-site .public-lightbox {
+    --public-focus: #fbc31f;
+}
+
+.public-site .public-tint {
+    background: var(--public-tint);
+}
+
+.public-site .public-inverse {
+    --public-focus: #fbc31f;
+    color: #ffffff;
+    background-color: #362743;
+}
+
+.public-site .public-inverse .public-button-primary {
+    background: #ffffff;
+    color: #362743;
+}
+
+.public-site .public-inverse .public-button-secondary {
+    border-color: #b9acc9;
+    color: #ffffff;
+}
+
+.public-site .public-about-band {
+    background: var(--public-surface);
+    border-block: 1px solid var(--color-silver);
+}
+
+.public-site .public-overview {
+    box-shadow: var(--shadow-md);
+}
+
+.public-site .public-overview-icon,
+.public-site .public-quick-icon {
+    background: var(--public-tint);
+    color: var(--color-purple-deep);
+}
+
+.public-site .public-quick-link:hover .public-quick-icon {
+    background: var(--public-action);
+    color: var(--public-on-action);
+}
+
+.public-site .public-hero-title {
+    font-weight: 600;
+    letter-spacing: -0.04em;
+}
+
+.public-site .public-hero-art {
+    border-color: rgb(255 255 255 / 0.15);
+    border-radius: 1.5rem;
+}
+
+@media (max-width: 639px) {
+    .public-site .public-hero-art {
+        min-height: 22rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .public-site .public-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .public-site .public-page-hero > div {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+/* Retain the existing desktop breakpoint and all navigation entries. */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .public-site .public-navbar > div {
+        gap: 0.5rem;
+    }
+
+    .public-site .public-navbar .public-brand > div:last-child {
+        max-width: 7rem;
+    }
+
+    .public-site .public-navbar .public-brand > div:last-child > div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .public-site .public-navigation > a,
+    .public-site .public-navigation > div > a {
+        padding-inline: 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+
 @layer base {
     :root {
         --color-fst-lavender: #c9b8e6;

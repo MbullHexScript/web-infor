@@ -23,7 +23,7 @@ export default function LecturersDirectory({
                         : 'Lecturer directory of the Informatics Study Program.'
                 }
             />
-            <div className="mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6">
                 <LecturerFilters filters={filters} locale={locale} />
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     {lecturers.data.map((lecturer) => (

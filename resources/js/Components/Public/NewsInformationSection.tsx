@@ -29,7 +29,7 @@ export function NewsInformationSection({
                     />
                 ) : null}
             </div>
-            <div className="rounded-[var(--radius-md)] border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+            <div className="public-card rounded-[var(--radius-md)] border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
                 <div className="grid gap-4">
                     <div>
                         <h3 className="font-bold text-brand-charcoal dark:text-white">

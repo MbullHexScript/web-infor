@@ -34,7 +34,7 @@ export function GlobalSearchButton({ label }: { label: string }) {
             <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-sm)] border border-brand-silver bg-white/80 text-brand-graphite transition hover:border-brand-purple hover:text-brand-deep dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-200"
+                className="public-control inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-sm)] border border-brand-silver bg-white/80 text-brand-graphite transition hover:border-brand-purple hover:text-brand-deep dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-200"
                 aria-label={label}
             >
                 <Search size={18} />
@@ -47,7 +47,7 @@ export function GlobalSearchButton({ label }: { label: string }) {
                 >
                     <form
                         onSubmit={submit}
-                        className="mx-auto mt-24 max-w-xl rounded-md bg-white p-4 shadow-[var(--shadow-lg)] dark:bg-[#1c2128]"
+                        className="public-search-panel mx-auto mt-24 max-w-xl rounded-2xl bg-white p-4 shadow-[var(--shadow-lg)] dark:bg-[#1c2128]"
                     >
                         <label
                             htmlFor="global-search-overlay"
@@ -68,7 +68,7 @@ export function GlobalSearchButton({ label }: { label: string }) {
                                         : 'Mata kuliah, berita, dokumen...'
                                 }
                             />
-                            <button className="rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white">
+                            <button className="public-button-primary rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white">
                                 {locale === 'en' ? 'Search' : 'Cari'}
                             </button>
                         </div>

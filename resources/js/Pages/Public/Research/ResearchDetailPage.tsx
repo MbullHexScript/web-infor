@@ -20,7 +20,7 @@ export default function ResearchDetailPage({
                 description={item.summary ?? undefined}
             />
             <SectionBand title={locale === 'en' ? 'Research Details' : 'Detail Penelitian'}>
-                <div className="max-w-3xl rounded-md border border-brand-silver bg-white p-5 leading-7 dark:border-slate-700 dark:bg-[#1c2128]">
+                <div className="public-card public-prose max-w-3xl rounded-md border border-brand-silver bg-white p-5 leading-7 dark:border-slate-700 dark:bg-[#1c2128]">
                     <p>
                         <strong>{locale === 'en' ? 'Lead' : 'Ketua'}:</strong> {item.lead ?? '-'}
                     </p>

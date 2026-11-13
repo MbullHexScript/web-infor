@@ -38,7 +38,7 @@ export default function AnnouncementDetail({
                     {announcement.attachmentUrl && (
                         <a
                             href={announcement.attachmentUrl}
-                            className="rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
+                            className="public-button-primary rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
                         >
                             {locale === 'en' ? 'Download attachment' : 'Unduh lampiran'}
                         </a>

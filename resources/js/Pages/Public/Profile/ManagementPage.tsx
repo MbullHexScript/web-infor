@@ -17,7 +17,7 @@ export default function ManagementPage({
                         : 'Management structure of the Informatics Study Program.'
                 }
             />
-            <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto max-w-7xl px-4 py-10 sm:px-6">
                 <ManagementTree positions={positions} locale={locale} />
             </div>
         </ProfileShell>

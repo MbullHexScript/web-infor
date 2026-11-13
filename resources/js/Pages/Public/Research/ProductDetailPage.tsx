@@ -19,7 +19,7 @@ export default function ProductDetailPage({
                 description={item.summary ?? undefined}
             />
             <SectionBand title={locale === 'en' ? 'Product Details' : 'Detail Produk'}>
-                <div className="max-w-3xl rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+                <div className="public-card max-w-3xl rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
                     <div className="flex flex-wrap gap-2">
                         {item.technologies.map((tech) => (
                             <TechnologyBadge key={tech} label={tech} />
@@ -28,7 +28,7 @@ export default function ProductDetailPage({
                     <div className="mt-5 flex flex-wrap gap-3">
                         {item.demoUrl && (
                             <a
-                                className="rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
+                                className="public-button-primary rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
                                 href={item.demoUrl}
                             >
                                 Demo
@@ -36,7 +36,7 @@ export default function ProductDetailPage({
                         )}
                         {item.repositoryUrl && (
                             <a
-                                className="rounded-md border px-4 py-2 text-sm font-bold"
+                                className="public-button-secondary rounded-md border px-4 py-2 text-sm font-bold"
                                 href={item.repositoryUrl}
                             >
                                 Repository
@@ -44,7 +44,7 @@ export default function ProductDetailPage({
                         )}
                         {item.documentationUrl && (
                             <a
-                                className="rounded-md border px-4 py-2 text-sm font-bold"
+                                className="public-button-secondary rounded-md border px-4 py-2 text-sm font-bold"
                                 href={item.documentationUrl}
                             >
                                 Docs

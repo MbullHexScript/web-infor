@@ -5,7 +5,7 @@ export function NavbarBrand({ compact = false }: { compact?: boolean }) {
     return (
         <Link
             href="/id"
-            className="flex min-w-0 items-center gap-3"
+            className="public-brand flex min-w-0 items-center gap-2.5"
             aria-label="Beranda Informatika"
         >
             <div className="flex shrink-0 items-center gap-2">
@@ -21,7 +21,7 @@ export function NavbarBrand({ compact = false }: { compact?: boolean }) {
                 />
             </div>
             <div className="hidden min-w-0 sm:block">
-                <div className="font-heading text-sm font-black tracking-normal text-brand-charcoal dark:text-white">
+                <div className="font-heading text-sm font-bold tracking-tight text-brand-charcoal dark:text-white">
                     INFORMATIKA
                 </div>
                 <div className="max-w-[17rem] truncate text-[11px] font-semibold text-brand-graphite dark:text-slate-300">

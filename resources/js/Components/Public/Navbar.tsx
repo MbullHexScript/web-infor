@@ -23,7 +23,7 @@ export function Navbar({ locale, hasTopBar = true }: { locale: Locale; hasTopBar
     return (
         <>
             <header
-                className={`border-brand-silver/80 fixed inset-x-0 top-0 z-50 border-b bg-white/95 shadow-sm backdrop-blur-2xl transition-all duration-300 dark:border-white/10 dark:bg-[#11151a]/95 ${
+                className={`public-navbar border-brand-silver/80 fixed inset-x-0 top-0 z-50 border-b bg-white/95 shadow-sm transition-all duration-300 dark:border-white/10 dark:bg-[#11151a]/95 ${
                     hasTopBar ? 'lg:top-9' : ''
                 }`}
             >
@@ -48,7 +48,7 @@ export function Navbar({ locale, hasTopBar = true }: { locale: Locale; hasTopBar
                         </div>
                         <button
                             type="button"
-                            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/70 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/10 lg:hidden"
+                            className="public-control inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/70 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/10 lg:hidden"
                             onClick={() => setDrawerOpen(true)}
                             aria-label={locale === 'id' ? 'Buka menu' : 'Open menu'}
                             aria-expanded={drawerOpen}

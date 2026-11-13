@@ -43,7 +43,7 @@ export default function AchievementDetailPage({
                 </dl>
                 {item.certificateUrl && (
                     <a
-                        className="mt-6 inline-block rounded-md border border-brand-silver px-4 py-3 text-sm font-bold dark:border-slate-700"
+                        className="public-button-secondary mt-6 inline-block rounded-md border border-brand-silver px-4 py-3 text-sm font-bold dark:border-slate-700"
                         href={item.certificateUrl}
                     >
                         {locale === 'en' ? 'View certificate' : 'Lihat sertifikat'}
@@ -56,7 +56,7 @@ export default function AchievementDetailPage({
 
 function Info({ label, value }: { label: string; value?: string | null }) {
     return (
-        <div className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]">
+        <div className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]">
             <dt className="text-xs font-bold uppercase text-brand-purple">{label}</dt>
             <dd className="mt-1 font-semibold">{value ?? '-'}</dd>
         </div>

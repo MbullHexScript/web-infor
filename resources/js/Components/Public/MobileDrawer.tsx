@@ -65,19 +65,19 @@ export function MobileDrawer({ locale, open, onClose }: MobileDrawerProps) {
         <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true">
             <button
                 type="button"
-                className="bg-brand-charcoal/55 absolute inset-0"
+                className="absolute inset-0 bg-black/55"
                 onClick={onClose}
                 aria-label={locale === 'id' ? 'Tutup menu' : 'Close menu'}
             />
             <div
                 ref={panelRef}
-                className="absolute right-0 top-0 flex h-dvh w-[min(22rem,88vw)] flex-col overflow-y-auto bg-white p-5 shadow-[var(--shadow-lg)] dark:bg-[#1c2128]"
+                className="absolute right-0 top-0 flex h-[100dvh] w-[min(22rem,88vw)] flex-col overflow-y-auto bg-white p-5 shadow-[var(--shadow-lg)] dark:bg-[#1c2128]"
             >
                 <div className="flex items-center justify-between">
                     <div className="font-heading text-lg font-bold">INFORMATIKA</div>
                     <button
                         type="button"
-                        className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-brand-silver dark:border-slate-700"
+                        className="public-control inline-flex h-11 w-11 items-center justify-center rounded-md border border-brand-silver dark:border-slate-700"
                         onClick={onClose}
                         aria-label={locale === 'id' ? 'Tutup menu' : 'Close menu'}
                     >

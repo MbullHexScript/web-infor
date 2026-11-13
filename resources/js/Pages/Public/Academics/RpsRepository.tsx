@@ -36,7 +36,7 @@ export default function RpsRepositoryPage({
                         : 'Temukan dan unduh Rencana Pembelajaran Semester mata kuliah Program Studi Informatika.'
                 }
             />
-            <div className="mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6">
                 <RpsFilters filters={filters} locale={locale} />
                 <div className="text-sm font-bold text-brand-graphite dark:text-slate-300">
                     {items.total} hasil

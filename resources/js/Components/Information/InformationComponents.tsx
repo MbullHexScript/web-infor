@@ -65,7 +65,7 @@ export function InformationShell({
     children: ReactNode;
 }) {
     return (
-        <div className="min-h-screen bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
+        <div className="public-site min-h-screen bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
             <Head title={seo.title}>
                 <meta name="description" content={seo.description} />
             </Head>
@@ -92,7 +92,7 @@ export function InformationHero({
 }) {
     const isEnglish = locale === 'en';
     return (
-        <section className="border-b border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-page-hero border-b border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_.65fr] lg:py-16">
                 <div>
                     <p className="text-sm font-bold uppercase tracking-[.2em] text-brand-purple">
@@ -147,7 +147,7 @@ export function SearchPanel({ locale }: { locale: Locale }) {
                     }
                 />
                 <button
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand-deep text-white"
+                    className="public-button-primary inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand-deep text-white"
                     aria-label={isEnglish ? 'Search' : 'Cari'}
                 >
                     <Search size={18} />
@@ -159,7 +159,7 @@ export function SearchPanel({ locale }: { locale: Locale }) {
 
 export function SectionBand({ title, children }: { title: string; children: ReactNode }) {
     return (
-        <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+        <section className="public-section mx-auto max-w-7xl px-4 py-10 sm:px-6">
             <h2 className="text-2xl font-black">{title}</h2>
             <div className="mt-5">{children}</div>
         </section>
@@ -168,7 +168,7 @@ export function SectionBand({ title, children }: { title: string; children: Reac
 
 export function NewsCard({ item, locale }: { item: NewsItem; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-md)] dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-md)] dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="flex flex-wrap items-center gap-2 text-xs font-bold uppercase text-brand-purple">
                 {item.category && <span>{item.category}</span>}
                 <span>{formatDate(item.publishedAt, locale)}</span>
@@ -230,7 +230,7 @@ export function AnnouncementPriorityBadge({
 
 export function AnnouncementCard({ item, locale }: { item: AnnouncementItem; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="flex flex-wrap items-center gap-2">
                 <AnnouncementPriorityBadge priority={item.priority} />
                 {item.expired && (
@@ -266,7 +266,7 @@ export function EventStatusBadge({ status }: { status: EventItem['status'] }) {
 export function EventCard({ item, locale }: { item: EventItem; locale: Locale }) {
     const date = item.startAt ? new Date(item.startAt) : null;
     return (
-        <article className="grid gap-4 rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128] sm:grid-cols-[96px_1fr]">
+        <article className="public-card grid gap-4 rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128] sm:grid-cols-[96px_1fr]">
             <div className="bg-brand-lavender/20 flex h-24 flex-col items-center justify-center rounded-md text-brand-deep dark:text-white">
                 <span className="text-3xl font-black">{date ? date.getDate() : '-'}</span>
                 <span className="text-xs font-bold uppercase">
@@ -297,7 +297,7 @@ export function EventCard({ item, locale }: { item: EventItem; locale: Locale })
                         href={item.googleCalendarUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-md bg-brand-deep px-3 py-2 text-sm font-bold text-white"
+                        className="public-button-primary inline-flex items-center gap-2 rounded-md bg-brand-deep px-3 py-2 text-sm font-bold text-white"
                     >
                         <CalendarDays size={16} /> Google
                     </a>
@@ -309,7 +309,7 @@ export function EventCard({ item, locale }: { item: EventItem; locale: Locale })
 
 export function AlbumCard({ item }: { item: AlbumItem }) {
     return (
-        <article className="overflow-hidden rounded-md border border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card overflow-hidden rounded-md border border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
             <img src={item.cover} alt="" className="h-44 w-full object-cover" loading="lazy" />
             <div className="p-5">
                 <div className="text-xs font-bold uppercase text-brand-purple">
@@ -349,7 +349,7 @@ export function MediaLightbox({ media }: { media: MediaItem[] }) {
                     <button
                         key={`${item.id}-${itemIndex}`}
                         onClick={() => setIndex(itemIndex)}
-                        className="group overflow-hidden rounded-md border border-brand-silver bg-white text-left dark:border-slate-700 dark:bg-[#1c2128]"
+                        className="public-card group overflow-hidden rounded-md border border-brand-silver bg-white text-left dark:border-slate-700 dark:bg-[#1c2128]"
                     >
                         <img
                             src={item.url}
@@ -363,7 +363,7 @@ export function MediaLightbox({ media }: { media: MediaItem[] }) {
             </div>
             {active && (
                 <div
-                    className="fixed inset-0 z-[70] bg-black/85 p-4 text-white"
+                    className="public-lightbox fixed inset-0 z-[70] bg-black/85 p-4 text-white"
                     role="dialog"
                     aria-modal="true"
                 >
@@ -411,7 +411,7 @@ export function VideoEmbed({ item }: { item: MediaItem }) {
 
 export function DocumentCard({ item, locale }: { item: DocumentItem; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="flex items-start gap-3">
                 <FileText className="mt-1 text-brand-purple" />
                 <div className="min-w-0 flex-1">
@@ -430,7 +430,7 @@ export function DocumentCard({ item, locale }: { item: DocumentItem; locale: Loc
                 </div>
                 <a
                     href={item.downloadUrl}
-                    className="inline-flex items-center gap-2 rounded-md bg-brand-deep px-3 py-2 text-sm font-bold text-white"
+                    className="public-button-primary inline-flex items-center gap-2 rounded-md bg-brand-deep px-3 py-2 text-sm font-bold text-white"
                     aria-label={`${locale === 'en' ? 'Download' : 'Unduh'} ${item.title}`}
                 >
                     <Download size={16} />
@@ -447,7 +447,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
             {items.map((item) => (
                 <section
                     key={item.id}
-                    className="rounded-md border border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]"
+                    className="public-card rounded-md border border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]"
                 >
                     <button
                         className="flex w-full items-center justify-between gap-4 p-4 text-left font-black"
@@ -490,7 +490,7 @@ export function FilterBar({
     return (
         <form
             onSubmit={submit}
-            className="mb-6 grid gap-3 rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128] md:grid-cols-[1fr_220px_auto]"
+            className="public-card mb-6 grid gap-3 rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128] md:grid-cols-[1fr_220px_auto]"
         >
             <input
                 value={q}
@@ -514,7 +514,7 @@ export function FilterBar({
                     ))}
                 </select>
             )}
-            <button className="rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white">
+            <button className="public-button-primary rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white">
                 {locale === 'en' ? 'Apply' : 'Terapkan'}
             </button>
         </form>
@@ -541,7 +541,7 @@ export function Pagination<T>({ data }: { data: Paginated<T> }) {
 export function ArticleContent({ html }: { html?: string | null }) {
     return (
         <div
-            className="prose prose-slate dark:prose-invert max-w-[820px]"
+            className="public-prose prose prose-slate dark:prose-invert max-w-[820px]"
             dangerouslySetInnerHTML={{ __html: html ?? '' }}
         />
     );
@@ -549,7 +549,7 @@ export function ArticleContent({ html }: { html?: string | null }) {
 
 export function SearchResultGroup({ title, items }: { title: string; items: SearchResult[] }) {
     return (
-        <section className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <h2 className="font-black">{title}</h2>
             <div className="mt-3 grid gap-3">
                 {items.map((item) => (

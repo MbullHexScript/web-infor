@@ -18,7 +18,7 @@ export default function HomePage(props: HomePageProps) {
     const sectionMap = new Map(props.sections.map((section) => [section.key, section]));
 
     return (
-        <div className="min-h-screen overflow-x-hidden bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
+        <div className="public-site min-h-screen overflow-x-hidden bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
             <Head title={props.seo.title}>
                 <meta name="description" content={props.seo.description} />
                 <link rel="canonical" href={props.seo.canonical} />
@@ -91,21 +91,21 @@ function PageSection({ setting, children }: { setting?: SectionSetting; children
 
     if (isQuickLinks) {
         return (
-            <section className="pb-18 relative overflow-hidden bg-[#f8f9fb] px-4 pt-4 sm:px-6 lg:pb-20 lg:pt-6">
-                <div className="bg-brand-lavender/12 absolute inset-x-0 top-0 h-20 blur-3xl" />
+            <section className="public-section relative overflow-hidden bg-brand-soft px-4 sm:px-6">
+                <div className="bg-brand-lavender/10 absolute inset-x-0 top-0 h-20 blur-3xl" />
                 <div className="relative mx-auto max-w-7xl">
                     <Reveal>
                         <div className="mx-auto max-w-3xl text-center">
                             <div className="mx-auto mb-3 flex w-fit items-center gap-3">
                                 <span className="h-px w-12 bg-brand-yellow" />
-                                <span className="h-2 w-2 rounded-full bg-brand-yellow shadow-[0_0_18px_rgba(251,195,31,.75)] motion-safe:animate-[quick-pulse_2.8s_ease-in-out_infinite]" />
+                                <span className="h-2 w-2 rounded-full bg-brand-yellow shadow-none motion-safe:animate-[quick-pulse_2.8s_ease-in-out_infinite]" />
                                 <span className="h-px w-12 bg-brand-yellow" />
                             </div>
-                            <h2 className="font-heading text-3xl font-bold tracking-normal text-brand-charcoal md:text-4xl">
+                            <h2 className="public-section-title font-heading text-3xl font-semibold tracking-tight text-brand-charcoal md:text-4xl">
                                 {setting.title}
                             </h2>
                             {setting.subtitle && (
-                                <p className="text-brand-muted mx-auto mt-3 max-w-2xl text-base leading-7">
+                                <p className="public-section-description mx-auto mt-3 max-w-2xl text-base leading-7">
                                     {setting.subtitle}
                                 </p>
                             )}
@@ -121,8 +121,8 @@ function PageSection({ setting, children }: { setting?: SectionSetting; children
 
     if (isAbout) {
         return (
-            <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8f9fb_0%,#fbf9ff_100%)] px-4 py-16 sm:px-6 lg:py-20">
-                <div className="bg-brand-lavender/20 absolute -left-24 top-20 h-64 w-64 rounded-full blur-3xl" />
+            <section className="public-section public-about-band relative overflow-hidden px-4 sm:px-6">
+                <div className="bg-brand-lavender/10 absolute -left-24 top-20 h-64 w-64 rounded-full blur-3xl" />
                 <div className="relative mx-auto max-w-7xl">
                     <Reveal>
                         <SectionHeader title={setting.title} subtitle={setting.subtitle} />
@@ -136,7 +136,7 @@ function PageSection({ setting, children }: { setting?: SectionSetting; children
     }
 
     return (
-        <section className="lg:py-18 mx-auto max-w-7xl px-4 py-14 sm:px-6">
+        <section className="public-section mx-auto max-w-7xl px-4 sm:px-6">
             <Reveal>
                 <SectionHeader title={setting.title} subtitle={setting.subtitle} />
             </Reveal>

@@ -7,7 +7,7 @@ export function TopBar({ links }: { links: TopLink[] }) {
     if (links.length === 0) return null;
 
     return (
-        <div className="fixed inset-x-0 top-0 z-50 hidden h-9 border-b border-white/30 bg-brand-charcoal text-xs text-white/85 dark:border-slate-800 lg:block">
+        <div className="fixed inset-x-0 top-0 z-50 hidden h-9 border-b border-white/30 bg-[#171b21] text-xs text-white/85 dark:border-slate-800 lg:block">
             <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
                 <div className="flex items-center gap-4">
                     <TopBarLink link={primary} />

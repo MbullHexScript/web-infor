@@ -13,7 +13,7 @@ export default function HistoryPage({
                 title={locale === 'id' ? 'Sejarah Program Studi' : 'Study Program History'}
                 description={page.excerpt_id ?? ''}
             />
-            <div className="mx-auto grid max-w-5xl gap-6 px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto grid max-w-5xl gap-6 px-4 py-10 sm:px-6">
                 <p className="leading-8 text-brand-graphite dark:text-slate-300">
                     {locale === 'en' ? page.content_en : page.content_id}
                 </p>

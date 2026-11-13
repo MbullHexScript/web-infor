@@ -16,7 +16,7 @@ export function LogoMark({ label, tone, className, compact = false }: LogoMarkPr
     return (
         <div
             className={cn(
-                'flex items-center justify-center overflow-hidden rounded-xl border bg-white shadow-sm transition-[height,width]',
+                'public-logo flex items-center justify-center overflow-hidden rounded-xl border bg-white shadow-sm transition-[height,width]',
                 compact ? 'h-10 w-10' : 'h-12 w-12',
                 tone === 'uin'
                     ? 'border-brand-yellow/60 p-1.5'

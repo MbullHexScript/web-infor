@@ -27,7 +27,7 @@ export function AcademicShell({
     children: ReactNode;
 }) {
     return (
-        <div className="min-h-screen overflow-x-hidden bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
+        <div className="public-site min-h-screen overflow-x-hidden bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
             <Head title={title}>
                 <meta name="description" content={description} />
             </Head>
@@ -35,7 +35,7 @@ export function AcademicShell({
             <main id="content" className="pt-[4.75rem]">
                 {children}
             </main>
-            <footer className="border-t border-brand-silver bg-white py-8 text-sm text-brand-graphite dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-300">
+            <footer className="public-footer border-t border-brand-silver bg-white py-8 text-sm text-brand-graphite dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-300">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6">
                     Program Studi Informatika UIN Sultan Maulana Hasanuddin Banten
                 </div>
@@ -56,7 +56,7 @@ export function AcademicHero({
     description: string;
 }) {
     return (
-        <section className="border-brand-silver/70 border-b bg-white dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-page-hero border-brand-silver/70 border-b bg-white dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.1fr_.9fr] lg:py-16">
                 <div>
                     <div className="inline-flex items-center gap-2 rounded-md border border-brand-silver px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-purple dark:border-slate-600">
@@ -71,7 +71,7 @@ export function AcademicHero({
                     </p>
                     <div className="mt-7 flex flex-wrap gap-3">
                         <Link
-                            className="rounded-md bg-brand-deep px-5 py-3 text-sm font-bold text-white"
+                            className="public-button-primary rounded-md bg-brand-deep px-5 py-3 text-sm font-bold text-white"
                             href={
                                 locale === 'id'
                                     ? '/id/akademik/mata-kuliah'
@@ -81,7 +81,7 @@ export function AcademicHero({
                             {locale === 'id' ? 'Lihat Mata Kuliah' : 'View Courses'}
                         </Link>
                         <Link
-                            className="rounded-md border border-brand-silver px-5 py-3 text-sm font-bold text-brand-deep dark:text-white"
+                            className="public-button-secondary rounded-md border border-brand-silver px-5 py-3 text-sm font-bold text-brand-deep dark:text-white"
                             href={
                                 locale === 'id' ? '/id/akademik/rps' : '/en/academics/course-plans'
                             }
@@ -120,7 +120,7 @@ export function CurriculumStats({ totals }: { totals: Record<string, SemesterTot
             {Object.entries(totals).map(([semester, total]) => (
                 <div
                     key={semester}
-                    className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
+                    className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
                 >
                     <div className="text-sm font-semibold text-brand-purple">
                         Semester {semester}
@@ -139,7 +139,7 @@ export function CurriculumStats({ totals }: { totals: Record<string, SemesterTot
 
 export function CurriculumPhilosophy({ locale }: { locale: Locale }) {
     return (
-        <section className="rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-card rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
             <h2 className="text-2xl font-black">
                 {locale === 'id' ? 'Filosofi OBE' : 'OBE Philosophy'}
             </h2>
@@ -176,7 +176,7 @@ export function GraduateProfileCard({
     locale: Locale;
 }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="font-mono text-sm font-bold text-brand-purple">{profile.code}</div>
             <h3 className="mt-2 text-xl font-black">
                 {locale === 'en' ? profile.title_en || profile.title_id : profile.title_id}
@@ -223,7 +223,7 @@ export function SpecializationCard({
             ? `/id/akademik/peminatan/${specialization.slug_id}`
             : `/en/academics/specializations/${specialization.slug_en}`;
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="flex items-center justify-between">
                 <div className="font-mono text-sm font-bold text-brand-purple">
                     {specialization.code}
@@ -272,7 +272,7 @@ export function CurriculumJourney({ locale }: { locale: Locale }) {
             {items.map((item, index) => (
                 <div
                     key={item}
-                    className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
+                    className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
                 >
                     <div className="text-xs font-bold text-brand-purple">0{index + 1}</div>
                     <div className="mt-1 font-bold">{item}</div>
@@ -284,7 +284,11 @@ export function CurriculumJourney({ locale }: { locale: Locale }) {
 
 export function SemesterTabs({ active, locale }: { active: number; locale: Locale }) {
     return (
-        <div role="tablist" aria-label="Semester" className="flex gap-2 overflow-x-auto pb-2">
+        <div
+            role="tablist"
+            aria-label="Semester"
+            className="public-tabs flex gap-2 overflow-x-auto pb-2"
+        >
             {Array.from({ length: 8 }, (_, index) => index + 1).map((semester) => (
                 <Link
                     key={semester}
@@ -302,7 +306,7 @@ export function SemesterTabs({ active, locale }: { active: number; locale: Local
 
 export function SemesterSummary({ semester, total }: { semester: number; total?: SemesterTotal }) {
     return (
-        <div className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]">
+        <div className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="text-sm font-semibold text-brand-graphite dark:text-slate-300">
                 Total Semester {semester}
             </div>
@@ -315,7 +319,7 @@ export function SemesterSummary({ semester, total }: { semester: number; total?:
 
 export function CourseTable({ courses, locale }: { courses: Course[]; locale: Locale }) {
     return (
-        <div className="hidden overflow-hidden rounded-md border border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128] lg:block">
+        <div className="public-card hidden overflow-hidden rounded-md border border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128] lg:block">
             <table className="w-full text-left text-sm">
                 <caption className="sr-only">Struktur mata kuliah</caption>
                 <thead className="bg-brand-soft text-xs uppercase text-brand-graphite dark:bg-[#11151a] dark:text-slate-300">
@@ -371,7 +375,7 @@ export function CourseTableRow({ course, locale }: { course: Course; locale: Loc
 
 export function CourseMobileCard({ course, locale }: { course: Course; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="flex items-start justify-between gap-3">
                 <div>
                     <div className="font-mono text-sm font-bold text-brand-purple">
@@ -399,13 +403,13 @@ export function CourseMobileCard({ course, locale }: { course: Course; locale: L
             <div className="mt-4 flex gap-2">
                 <Link
                     href={courseHref(course, locale)}
-                    className="rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
+                    className="public-button-primary rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
                 >
                     Detail
                 </Link>
                 <Link
                     href={locale === 'id' ? '/id/akademik/rps' : '/en/academics/course-plans'}
-                    className="rounded-md border border-brand-silver px-4 py-2 text-sm font-bold"
+                    className="public-button-secondary rounded-md border border-brand-silver px-4 py-2 text-sm font-bold"
                 >
                     RPS
                 </Link>
@@ -435,7 +439,7 @@ export function CoursePrerequisiteList({ course }: { course: Course }) {
 
 export function CourseDetailHeader({ course, locale }: { course: Course; locale: Locale }) {
     return (
-        <div className="rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
+        <div className="public-card rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="font-mono text-sm font-bold text-brand-purple">{course.code}</div>
             <h1 className="mt-2 text-3xl font-black">
                 {locale === 'en' ? course.name_en || course.name_id : course.name_id}
@@ -514,7 +518,7 @@ export function RpsFilters({
     return (
         <form
             onSubmit={submit}
-            className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
+            className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
         >
             <div className="grid gap-3 md:grid-cols-[1fr_140px_160px_auto]">
                 <label className="grid gap-1 text-sm font-bold">
@@ -551,7 +555,7 @@ export function RpsFilters({
                         <option value="elective">Pilihan</option>
                     </select>
                 </label>
-                <button className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-brand-deep px-4 text-sm font-bold text-white">
+                <button className="public-button-primary mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-brand-deep px-4 text-sm font-bold text-white">
                     <Filter size={16} /> Filter
                 </button>
             </div>
@@ -593,7 +597,7 @@ export function PdfPreview({ src }: { src?: string }) {
 
 export function PdfErrorFallback() {
     return (
-        <div className="rounded-md border border-brand-silver bg-white p-6 text-sm text-brand-graphite dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-300">
+        <div className="public-card rounded-md border border-brand-silver bg-white p-6 text-sm text-brand-graphite dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-300">
             Preview PDF belum tersedia. Gunakan tombol download jika file sudah dipublikasikan.
         </div>
     );
@@ -620,7 +624,7 @@ export function AcademicDocumentCard({ item }: { item: Record<string, string> })
 
 export function EmptyState({ title }: { title: string }) {
     return (
-        <div className="rounded-md border border-dashed border-brand-silver bg-white p-8 text-center text-brand-graphite dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-300">
+        <div className="public-card rounded-md border border-dashed border-brand-silver bg-white p-8 text-center text-brand-graphite dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-300">
             {title}
         </div>
     );

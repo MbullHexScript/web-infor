@@ -22,7 +22,7 @@ export default function LecturerDetail({
             locale={locale}
             seo={{ ...seo, title: `${lecturer.full_name} | Program Studi Informatika UIN Banten` }}
         >
-            <div className="mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6 lg:grid-cols-[320px_1fr]">
+            <div className="public-section mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6 lg:grid-cols-[320px_1fr]">
                 <LecturerProfileHeader lecturer={lecturer} />
                 <div className="grid gap-5">
                     <LecturerBiography lecturer={lecturer} locale={locale} />

@@ -24,7 +24,7 @@ export default function ResearchPartnershipsPage({
                         items.map((item) => (
                             <article
                                 key={String(item.id)}
-                                className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]"
+                                className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]"
                             >
                                 <h3 className="font-black">{item.title}</h3>
                                 <p className="mt-2 text-sm">{item.scope}</p>

@@ -15,7 +15,7 @@ export function AnnouncementStrip({
 
     return (
         <section className="relative z-20 px-4 pt-8 text-brand-charcoal sm:px-6">
-            <div className="bg-white/92 dark:bg-[#171b21]/92 mx-auto flex max-w-6xl flex-col gap-4 rounded-[1.1rem] border border-white/75 p-4 shadow-[0_24px_70px_rgba(23,27,33,.16)] backdrop-blur-2xl dark:border-white/10 dark:text-white lg:flex-row lg:items-center">
+            <div className="public-card bg-white/92 dark:bg-[#171b21]/92 mx-auto flex max-w-[77rem] flex-col gap-4 rounded-[1.1rem] border border-white/75 p-4 shadow-[var(--shadow-sm)] backdrop-blur-2xl dark:border-white/10 dark:text-white lg:flex-row lg:items-center">
                 <div className="flex items-center justify-between gap-4 lg:w-56">
                     <div className="flex items-center gap-3">
                         <div className="bg-brand-lavender/20 flex h-12 w-12 items-center justify-center rounded-[var(--radius-sm)] text-brand-deep dark:text-brand-lavender">
@@ -54,7 +54,7 @@ export function AnnouncementStrip({
                             }
                             className="hover:bg-brand-lavender/12 group rounded-[var(--radius-sm)] border-l border-brand-silver px-4 py-2 text-sm transition dark:border-white/10"
                         >
-                            <span className="rounded-full bg-brand-yellow px-2 py-1 text-[10px] font-black uppercase text-brand-charcoal">
+                            <span className="rounded-full bg-brand-yellow px-2 py-1 text-[10px] font-black uppercase text-[#171b21]">
                                 {announcement.priority}
                             </span>
                             <span className="mt-2 block font-bold leading-5 text-brand-charcoal dark:text-white">

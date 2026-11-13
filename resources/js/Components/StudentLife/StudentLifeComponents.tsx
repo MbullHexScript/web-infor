@@ -34,7 +34,7 @@ export function StudentLifeShell({
     children: ReactNode;
 }) {
     return (
-        <div className="min-h-screen bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
+        <div className="public-site min-h-screen bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
             <Head title={seo.title}>
                 <meta name="description" content={seo.description} />
             </Head>
@@ -60,7 +60,7 @@ export function StudentLifeHero({
     description?: string;
 }) {
     return (
-        <section className="border-b border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-page-hero border-b border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_.72fr]">
                 <div>
                     <p className="text-sm font-bold uppercase text-brand-purple">
@@ -92,7 +92,11 @@ export function StudentLifeHero({
 }
 
 export function SectionBand({ children }: { children: ReactNode }) {
-    return <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6">{children}</section>;
+    return (
+        <section className="public-section mx-auto max-w-7xl px-4 py-10 sm:px-6">
+            {children}
+        </section>
+    );
 }
 
 export function FilterBar({
@@ -116,7 +120,7 @@ export function FilterBar({
     return (
         <form
             onSubmit={submit}
-            className="grid gap-3 rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128] sm:grid-cols-[1fr_auto]"
+            className="public-card grid gap-3 rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128] sm:grid-cols-[1fr_auto]"
         >
             <input
                 value={q}
@@ -124,7 +128,7 @@ export function FilterBar({
                 className="rounded-md border border-brand-silver px-3 py-2 text-sm text-brand-charcoal"
                 placeholder={placeholder ?? 'Search'}
             />
-            <button className="rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white">
+            <button className="public-button-primary rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white">
                 Apply
             </button>
         </form>
@@ -191,7 +195,7 @@ export function CampusLifeSection({
                 {items.map((item) => (
                     <div
                         key={item}
-                        className="rounded-md border border-brand-silver bg-white p-4 font-bold dark:border-slate-700 dark:bg-[#1c2128]"
+                        className="public-card rounded-md border border-brand-silver bg-white p-4 font-bold dark:border-slate-700 dark:bg-[#1c2128]"
                     >
                         {item}
                     </div>
@@ -223,7 +227,7 @@ export function MessageStatusBadge({ status }: { status: string }) {
 
 export function AchievementCard({ item, locale }: { item: Achievement; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="flex items-center justify-between gap-3">
                 <AchievementLevelBadge level={item.level} />
                 <span className="text-sm font-bold">{item.year ?? '-'}</span>
@@ -245,7 +249,7 @@ export function AchievementCard({ item, locale }: { item: Achievement; locale: L
 
 export function ScholarshipCard({ item, locale }: { item: Scholarship; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <ScholarshipStatusBadge status={item.status} />
             <h3 className="mt-3 text-xl font-black">
                 <Link href={item.url}>{item.name}</Link>
@@ -265,7 +269,7 @@ export function ScholarshipCard({ item, locale }: { item: Scholarship; locale: L
 
 export function CompetitionCard({ item, locale }: { item: Competition; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <CompetitionStatusBadge status={item.status} />
             <h3 className="mt-3 text-xl font-black">
                 <Link href={item.url}>{item.title}</Link>
@@ -284,7 +288,7 @@ export function CompetitionCard({ item, locale }: { item: Competition; locale: L
 
 export function AlumniCard({ item }: { item: Alumni }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <GraduationCap className="text-brand-purple" />
             <h3 className="mt-3 text-xl font-black">
                 <Link href={item.url}>{item.name}</Link>
@@ -292,7 +296,7 @@ export function AlumniCard({ item }: { item: Alumni }) {
             <p className="mt-2 text-sm font-semibold">{item.position}</p>
             <p className="text-sm text-brand-graphite dark:text-slate-300">{item.company}</p>
             {item.quote && (
-                <blockquote className="border-brand-gold mt-3 border-l-4 pl-3 text-sm">
+                <blockquote className="mt-3 border-l-4 border-brand-yellow pl-3 text-sm">
                     {item.quote}
                 </blockquote>
             )}
@@ -302,7 +306,7 @@ export function AlumniCard({ item }: { item: Alumni }) {
 
 export function FacilityCard({ item, locale }: { item: Facility; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <MapPin className="text-brand-purple" />
             <h3 className="mt-3 text-xl font-black">
                 <Link href={item.url}>{item.name}</Link>
@@ -323,7 +327,7 @@ export function FacilityCard({ item, locale }: { item: Facility; locale: Locale 
 
 export function AdmissionPathCard({ item, locale }: { item: AdmissionPath; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <StatusBadge status={item.status} />
             <h3 className="mt-3 text-xl font-black">{item.name}</h3>
             <p className="mt-2 text-sm leading-6 text-brand-graphite dark:text-slate-300">
@@ -349,7 +353,7 @@ export function HmpsExternalLink({ url, locale }: { url: string; locale: Locale 
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md bg-brand-deep px-4 py-3 text-sm font-bold text-white"
+            className="public-button-primary inline-flex items-center gap-2 rounded-md bg-brand-deep px-4 py-3 text-sm font-bold text-white"
         >
             {locale === 'en' ? 'Open HMPS website' : 'Buka website HMPS'} <ExternalLink size={16} />
         </a>
@@ -375,7 +379,7 @@ export function CareerRoadmap({ locale }: { locale: Locale }) {
             {careers.map((career) => (
                 <div
                     key={career}
-                    className="rounded-md border border-brand-silver bg-white p-4 text-sm font-bold dark:border-slate-700 dark:bg-[#1c2128]"
+                    className="public-card rounded-md border border-brand-silver bg-white p-4 text-sm font-bold dark:border-slate-700 dark:bg-[#1c2128]"
                 >
                     <BriefcaseBusiness className="mb-2 text-brand-purple" size={18} />
                     {career}
@@ -392,7 +396,7 @@ export function AdmissionFaq({ items }: { items: Faq[] }) {
             {items.map((item) => (
                 <details
                     key={item.question}
-                    className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
+                    className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
                 >
                     <summary className="cursor-pointer font-black">{item.question}</summary>
                     <p className="mt-3 text-sm leading-6 text-brand-graphite dark:text-slate-300">
@@ -412,7 +416,7 @@ export function ContactInfoCard({
     locale: Locale;
 }) {
     return (
-        <div className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <div className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <h2 className="text-xl font-black">
                 {locale === 'en' ? 'Contact Information' : 'Informasi Kontak'}
             </h2>
@@ -447,7 +451,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
     return (
         <form
             onSubmit={submit}
-            className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]"
+            className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]"
         >
             <h2 className="text-xl font-black">
                 {locale === 'en' ? 'Send a Message' : 'Kirim Pesan'}
@@ -519,7 +523,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
                 {Object.keys(form.errors).length > 0 && <ContactErrorState locale={locale} />}
                 <button
                     disabled={form.processing}
-                    className="inline-flex w-fit items-center gap-2 rounded-md bg-brand-deep px-4 py-3 text-sm font-bold text-white"
+                    className="public-button-primary inline-flex w-fit items-center gap-2 rounded-md bg-brand-deep px-4 py-3 text-sm font-bold text-white"
                 >
                     <Send size={16} /> {locale === 'en' ? 'Submit' : 'Kirim'}
                 </button>
@@ -571,7 +575,7 @@ export function MapEmbed({
 }) {
     if (!contact.map_embed_url) {
         return (
-            <div className="rounded-md border border-brand-silver bg-white p-5 text-sm dark:border-slate-700 dark:bg-[#1c2128]">
+            <div className="public-card rounded-md border border-brand-silver bg-white p-5 text-sm dark:border-slate-700 dark:bg-[#1c2128]">
                 {locale === 'en'
                     ? 'Map embed is pending verification.'
                     : 'Embed peta menunggu verifikasi.'}

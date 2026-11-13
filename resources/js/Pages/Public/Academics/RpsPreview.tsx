@@ -12,7 +12,7 @@ export default function RpsPreview({
             title={seo?.title ?? 'Preview RPS'}
             description={seo?.description ?? ''}
         >
-            <div className="mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_360px]">
+            <div className="public-section mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_360px]">
                 <PdfPreview src={`/storage/${rps.file_id}`} />
                 <RpsMetadata rps={rps} />
             </div>

@@ -9,7 +9,7 @@ export default function Placeholder({ locale, path }: { locale: Locale; path: st
     const isEnglish = locale === 'en';
 
     return (
-        <div className="min-h-screen bg-brand-soft dark:bg-[#11151a] dark:text-white">
+        <div className="public-site min-h-screen bg-brand-soft dark:bg-[#11151a] dark:text-white">
             <Head title={isEnglish ? 'Page in preparation' : 'Halaman sedang disiapkan'} />
             <TopBar links={[]} />
             <Navbar locale={locale} hasTopBar={false} />

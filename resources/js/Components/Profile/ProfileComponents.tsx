@@ -16,7 +16,7 @@ export function ProfileShell({
     children: ReactNode;
 }) {
     return (
-        <div className="min-h-screen overflow-x-hidden bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
+        <div className="public-site min-h-screen overflow-x-hidden bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
             <Head title={seo.title}>
                 <meta name="description" content={seo.description} />
             </Head>
@@ -38,7 +38,7 @@ export function ProfileHero({
     description: string;
 }) {
     return (
-        <section className="border-b border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-page-hero border-b border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
                 <div className="inline-flex items-center gap-2 rounded-md border border-brand-silver px-3 py-1 text-xs font-bold uppercase text-brand-purple dark:border-slate-600">
                     <Building2 size={14} />
@@ -63,7 +63,7 @@ export function AboutProgramSection({
     locale: Locale;
 }) {
     return (
-        <section className="rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-card rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
             <h2 className="text-2xl font-black">
                 {locale === 'en' ? page?.title_en : page?.title_id}
             </h2>
@@ -97,7 +97,7 @@ export function HistoryTimeline({ locale }: { locale: Locale }) {
             {items.map(([year, text]) => (
                 <li
                     key={year}
-                    className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]"
+                    className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]"
                 >
                     <div className="font-mono text-sm font-black text-brand-purple">{year}</div>
                     <p className="mt-2 leading-7 text-brand-graphite dark:text-slate-300">{text}</p>
@@ -135,7 +135,7 @@ export function VisionHighlight({
     locale: Locale;
 }) {
     return (
-        <section className="rounded-md bg-brand-deep p-6 text-white">
+        <section className="public-button-primary rounded-md bg-brand-deep p-6 text-white">
             <div className="text-sm font-bold uppercase text-brand-yellow">
                 {locale === 'id' ? 'Visi' : 'Vision'}
             </div>
@@ -160,7 +160,7 @@ export function MissionCard({ number, locale }: { number: number; locale: Locale
                   'Integrate Islamic values into technology.',
               ];
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="font-mono text-brand-purple">0{number}</div>
             <p className="mt-2 font-bold">{texts[number - 1]}</p>
         </article>
@@ -204,7 +204,7 @@ export function HeadMessageCard({
     locale: Locale;
 }) {
     return (
-        <section className="rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-card rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="text-sm font-bold text-brand-purple">Ahmad Tabrani, M.T.I</div>
             <h2 className="mt-1 text-2xl font-black">
                 {locale === 'id'
@@ -242,7 +242,7 @@ export function ManagementCard({
     locale: Locale;
 }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="text-sm font-bold text-brand-purple">
                 {locale === 'en'
                     ? position.position_en || position.position_id
@@ -277,7 +277,7 @@ export function LecturerFilters({
     return (
         <form
             onSubmit={submit}
-            className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
+            className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
         >
             <label className="grid gap-1 text-sm font-bold">
                 <span>{locale === 'id' ? 'Cari dosen' : 'Search lecturers'}</span>
@@ -287,7 +287,7 @@ export function LecturerFilters({
                         defaultValue={filters.q ?? ''}
                         className="min-w-0 flex-1 rounded-md border-brand-silver dark:bg-[#11151a]"
                     />
-                    <button className="inline-flex items-center gap-2 rounded-md bg-brand-deep px-4 text-sm font-bold text-white">
+                    <button className="public-button-primary inline-flex items-center gap-2 rounded-md bg-brand-deep px-4 text-sm font-bold text-white">
                         <Search size={16} />
                         Cari
                     </button>
@@ -305,7 +305,7 @@ export function LecturerCard({ lecturer, locale }: { lecturer: LecturerProfile; 
                     ? `/id/profil/dosen/${lecturer.slug}`
                     : `/en/profile/lecturers/${lecturer.slug}`
             }
-            className="rounded-md border border-brand-silver bg-white p-5 transition hover:border-brand-purple dark:border-slate-700 dark:bg-[#1c2128]"
+            className="public-card rounded-md border border-brand-silver bg-white p-5 transition hover:border-brand-purple dark:border-slate-700 dark:bg-[#1c2128]"
         >
             <InitialAvatar lecturer={lecturer} />
             <h3 className="mt-4 text-lg font-black">{lecturer.full_name}</h3>
@@ -323,7 +323,7 @@ export function LecturerCard({ lecturer, locale }: { lecturer: LecturerProfile; 
 
 export function LecturerProfileHeader({ lecturer }: { lecturer: LecturerProfile }) {
     return (
-        <section className="rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-card rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
             <InitialAvatar lecturer={lecturer} />
             <h1 className="mt-4 text-3xl font-black">{lecturer.full_name}</h1>
             <p className="text-brand-graphite dark:text-slate-300">{lecturer.academic_title}</p>
@@ -483,7 +483,7 @@ export function PartnersGrid({ partners }: { partners: Partner[] }) {
 
 export function PartnerCard({ partner }: { partner: Partner }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="text-xs font-bold text-brand-purple">{partner.partner_type}</div>
             <h3 className="mt-2 text-lg font-black">{partner.name}</h3>
             <p className="mt-2 text-sm leading-6 text-brand-graphite dark:text-slate-300">
@@ -509,7 +509,7 @@ export function ProfileCompletionPanel() {
 
 export function EmptyState({ title }: { title: string }) {
     return (
-        <div className="rounded-md border border-dashed border-brand-silver bg-white p-8 text-center text-brand-graphite dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-300">
+        <div className="public-card rounded-md border border-dashed border-brand-silver bg-white p-8 text-center text-brand-graphite dark:border-slate-700 dark:bg-[#1c2128] dark:text-slate-300">
             {title}
         </div>
     );
@@ -517,7 +517,7 @@ export function EmptyState({ title }: { title: string }) {
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
     return (
-        <section className="rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-card rounded-md border border-brand-silver bg-white p-6 dark:border-slate-700 dark:bg-[#1c2128]">
             <h2 className="text-xl font-black">{title}</h2>
             <div className="mt-4">{children}</div>
         </section>
@@ -540,7 +540,7 @@ function InitialAvatar({ lecturer }: { lecturer: LecturerProfile }) {
             />
         );
     return (
-        <div className="flex aspect-[4/5] w-full items-center justify-center rounded-md bg-brand-deep text-4xl font-black text-white">
+        <div className="public-button-primary flex aspect-[4/5] w-full items-center justify-center rounded-md bg-brand-deep text-4xl font-black text-white">
             {initials}
         </div>
     );

@@ -18,7 +18,7 @@ export default function SpecializationDetail({
             title={seo?.title ?? specialization.name_id}
             description={seo?.description ?? ''}
         >
-            <div className="mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6">
                 <SpecializationCard specialization={specialization} locale={locale} />
                 <CourseTable courses={courses} locale={locale} />
                 <div className="grid gap-3 lg:hidden">

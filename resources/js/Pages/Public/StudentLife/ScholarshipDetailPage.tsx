@@ -46,7 +46,7 @@ export default function ScholarshipDetailPage({
                             href={item.registrationUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-fit rounded-md bg-brand-deep px-4 py-3 text-sm font-bold text-white"
+                            className="public-button-primary w-fit rounded-md bg-brand-deep px-4 py-3 text-sm font-bold text-white"
                         >
                             {locale === 'en' ? 'Open official link' : 'Buka tautan resmi'}
                         </a>

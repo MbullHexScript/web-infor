@@ -21,7 +21,7 @@ export default function JournalDetailPage({
                 description={item.tagline ?? undefined}
             />
             <SectionBand title={item.fullName ?? item.name}>
-                <div className="max-w-4xl rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+                <div className="public-card max-w-4xl rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
                     <JournalStatusBadge status={item.status} />
                     <p className="mt-4 leading-7 text-brand-graphite dark:text-slate-300">
                         {item.description}
@@ -55,7 +55,7 @@ export default function JournalDetailPage({
                         {item.ojsUrl && (
                             <a
                                 href={item.ojsUrl}
-                                className="rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
+                                className="public-button-primary rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
                             >
                                 OJS
                             </a>
@@ -63,7 +63,7 @@ export default function JournalDetailPage({
                         {item.authorGuidelinesUrl && (
                             <a
                                 href={item.authorGuidelinesUrl}
-                                className="rounded-md border px-4 py-2 text-sm font-bold"
+                                className="public-button-secondary rounded-md border px-4 py-2 text-sm font-bold"
                             >
                                 Guidelines
                             </a>
@@ -71,7 +71,7 @@ export default function JournalDetailPage({
                         {item.articleTemplateUrl && (
                             <a
                                 href={item.articleTemplateUrl}
-                                className="rounded-md border px-4 py-2 text-sm font-bold"
+                                className="public-button-secondary rounded-md border px-4 py-2 text-sm font-bold"
                             >
                                 Template
                             </a>

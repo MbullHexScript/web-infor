@@ -65,7 +65,7 @@ export default function AdmissionLandingPage({
                     {advantages.map((item) => (
                         <div
                             key={item}
-                            className="rounded-md border border-brand-silver bg-white p-4 font-bold dark:border-slate-700 dark:bg-[#1c2128]"
+                            className="public-card rounded-md border border-brand-silver bg-white p-4 font-bold dark:border-slate-700 dark:bg-[#1c2128]"
                         >
                             {item}
                         </div>
@@ -99,7 +99,7 @@ export default function AdmissionLandingPage({
                 </div>
                 {portal.url ? (
                     <a
-                        className="mt-5 inline-block rounded-md bg-brand-deep px-4 py-3 text-sm font-bold text-white"
+                        className="public-button-primary mt-5 inline-block rounded-md bg-brand-deep px-4 py-3 text-sm font-bold text-white"
                         href={portal.url}
                         target="_blank"
                         rel="noopener noreferrer"

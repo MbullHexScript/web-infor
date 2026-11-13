@@ -45,7 +45,7 @@ export default function CurriculumPage({
                         : 'Kurikulum yang dirancang untuk membangun kompetensi profesional, kemampuan inovasi, integritas, dan tanggung jawab dalam menghadapi transformasi digital.'
                 }
             />
-            <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6">
                 <CurriculumStats totals={semesterTotals} />
                 <CurriculumPhilosophy locale={locale} />
                 <section>

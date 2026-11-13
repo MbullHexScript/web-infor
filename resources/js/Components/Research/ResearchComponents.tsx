@@ -27,7 +27,7 @@ export function ResearchShell({
     children: ReactNode;
 }) {
     return (
-        <div className="min-h-screen bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
+        <div className="public-site min-h-screen bg-brand-soft text-brand-charcoal dark:bg-[#11151a] dark:text-white">
             <Head title={seo.title}>
                 <meta name="description" content={seo.description} />
             </Head>
@@ -53,7 +53,7 @@ export function ResearchHero({
     description?: string;
 }) {
     return (
-        <section className="border-b border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
+        <section className="public-page-hero border-b border-brand-silver bg-white dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_.72fr]">
                 <div>
                     <p className="text-sm font-bold uppercase tracking-[.2em] text-brand-purple">
@@ -87,7 +87,7 @@ export function ResearchHero({
 
 export function ResearchCard({ item, locale }: { item: ResearchProject; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <Meta year={item.year} status={item.status} />
             <h3 className="mt-3 text-xl font-black">
                 <Link href={item.url ?? '#'}>{item.title}</Link>
@@ -108,7 +108,7 @@ export function ResearchCard({ item, locale }: { item: ResearchProject; locale: 
 
 export function ServiceCard({ item, locale }: { item: CommunityService; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <Meta year={item.year} status={item.status} />
             <h3 className="mt-3 text-xl font-black">
                 <Link href={item.url ?? '#'}>{item.title}</Link>
@@ -129,7 +129,7 @@ export function ServiceCard({ item, locale }: { item: CommunityService; locale: 
 
 export function PublicationItem({ item }: { item: Publication }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="text-xs font-bold uppercase text-brand-purple">
                 {item.type} | {item.year}
             </div>
@@ -156,7 +156,7 @@ export function PublicationItem({ item }: { item: Publication }) {
 
 export function ProductCard({ item, locale }: { item: Product; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <Meta year={item.year} status={item.status} />
             <h3 className="mt-3 text-xl font-black">
                 <Link href={item.url ?? '#'}>{item.title}</Link>
@@ -189,7 +189,7 @@ export function TechnologyBadge({ label }: { label: string }) {
 
 export function IpCard({ item }: { item: IntellectualProperty }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="flex items-center gap-2 text-xs font-bold uppercase text-brand-purple">
                 <ShieldCheck size={15} /> {item.type} {item.year}
             </div>
@@ -204,7 +204,7 @@ export function IpCard({ item }: { item: IntellectualProperty }) {
 
 export function ExpertiseGroupCard({ item }: { item: ExpertiseGroup }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <Layers3 className="text-brand-purple" />
             <h3 className="mt-3 text-xl font-black">
                 <Link href={item.url}>{item.name}</Link>
@@ -216,8 +216,8 @@ export function ExpertiseGroupCard({ item }: { item: ExpertiseGroup }) {
 
 export function JournalCard({ item, locale }: { item: Journal; locale: Locale }) {
     return (
-        <article className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md bg-brand-deep text-xl font-black text-white">
+        <article className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+            <div className="public-button-primary flex h-14 w-14 items-center justify-center rounded-md bg-brand-deep text-xl font-black text-white">
                 {item.code?.[0]}
             </div>
             <JournalStatusBadge status={item.status} />

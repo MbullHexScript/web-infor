@@ -41,7 +41,7 @@ export default function HmpsPage({
                     {roles.map((role) => (
                         <div
                             key={role}
-                            className="rounded-md border border-brand-silver bg-white p-4 font-bold dark:border-slate-700 dark:bg-[#1c2128]"
+                            className="public-card rounded-md border border-brand-silver bg-white p-4 font-bold dark:border-slate-700 dark:bg-[#1c2128]"
                         >
                             {role}
                         </div>

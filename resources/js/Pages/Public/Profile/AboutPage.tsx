@@ -17,7 +17,7 @@ export default function AboutPage({
                 title={locale === 'id' ? 'Tentang Informatika' : 'About Informatics'}
                 description={page.excerpt_id ?? ''}
             />
-            <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto max-w-5xl px-4 py-10 sm:px-6">
                 <AboutProgramSection page={page} locale={locale} />
             </div>
         </ProfileShell>

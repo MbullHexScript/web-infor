@@ -17,7 +17,7 @@ export default function HeadMessagePage({
                 }
                 description={page.excerpt_id ?? ''}
             />
-            <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto max-w-5xl px-4 py-10 sm:px-6">
                 <HeadMessageCard page={page} locale={locale} />
             </div>
         </ProfileShell>

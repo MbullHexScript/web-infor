@@ -35,7 +35,7 @@ export default function ProfileLandingPage({
                         : 'Discover the Informatics Study Program at the Faculty of Science and Technology, Sultan Maulana Hasanuddin State Islamic University Banten.'
                 }
             />
-            <div className="mx-auto grid max-w-7xl gap-6 px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto grid max-w-7xl gap-6 px-4 py-10 sm:px-6">
                 <AboutProgramSection page={summary.about} locale={locale} />
                 <HeadMessageCard page={summary.headMessage} locale={locale} />
                 <div className="grid gap-4 md:grid-cols-3">
@@ -56,7 +56,7 @@ export default function ProfileLandingPage({
 
 function Metric({ label, value }: { label: string; value: string | number }) {
     return (
-        <div className="rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
+        <div className="public-card rounded-md border border-brand-silver bg-white p-5 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="text-sm text-brand-graphite dark:text-slate-300">{label}</div>
             <div className="mt-1 text-3xl font-black">{value}</div>
         </div>

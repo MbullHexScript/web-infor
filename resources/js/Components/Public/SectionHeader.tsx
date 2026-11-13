@@ -13,11 +13,11 @@ export function SectionHeader({ eyebrow, title, subtitle, align = 'left' }: Sect
                     {eyebrow}
                 </p>
             )}
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-normal text-brand-charcoal dark:text-white md:text-4xl">
+            <h2 className="public-section-title mt-3 font-heading text-3xl font-bold tracking-normal text-brand-charcoal dark:text-white md:text-4xl">
                 {title}
             </h2>
             {subtitle && (
-                <p className="mt-4 text-base leading-7 text-brand-graphite dark:text-slate-300">
+                <p className="public-section-description mt-4 text-base leading-7 text-brand-graphite dark:text-slate-300">
                     {subtitle}
                 </p>
             )}

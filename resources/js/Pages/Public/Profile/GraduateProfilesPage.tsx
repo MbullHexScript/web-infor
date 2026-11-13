@@ -19,7 +19,7 @@ export default function GraduateProfilesPage({
                         : 'Graduate profiles from the 2026 OBE curriculum.'
                 }
             />
-            <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto max-w-7xl px-4 py-10 sm:px-6">
                 <GraduateProfilesGrid profiles={profiles} locale={locale} />
             </div>
         </ProfileShell>

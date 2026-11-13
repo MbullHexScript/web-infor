@@ -39,7 +39,7 @@ export default function MbkmPage({
                     {programs.map((program) => (
                         <div
                             key={program}
-                            className="rounded-md border border-brand-silver bg-white p-4 font-bold dark:border-slate-700 dark:bg-[#1c2128]"
+                            className="public-card rounded-md border border-brand-silver bg-white p-4 font-bold dark:border-slate-700 dark:bg-[#1c2128]"
                         >
                             {program}
                         </div>

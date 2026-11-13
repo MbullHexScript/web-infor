@@ -33,7 +33,7 @@ export default function AchievementsPage({
                     {Object.entries(stats).map(([key, value]) => (
                         <div
                             key={key}
-                            className="rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
+                            className="public-card rounded-md border border-brand-silver bg-white p-4 dark:border-slate-700 dark:bg-[#1c2128]"
                         >
                             <div className="text-2xl font-black">{value}</div>
                             <div className="text-sm uppercase">{key}</div>

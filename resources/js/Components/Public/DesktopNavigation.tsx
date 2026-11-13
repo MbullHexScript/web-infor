@@ -159,7 +159,10 @@ const items = [
 
 export function DesktopNavigation({ locale }: { locale: Locale }) {
     return (
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigasi utama">
+        <nav
+            className="public-navigation hidden items-center gap-1 lg:flex"
+            aria-label="Navigasi utama"
+        >
             <Link
                 href={`/${locale}`}
                 className="bg-brand-lavender/20 ring-brand-lavender/30 hover:bg-brand-lavender/30 rounded-full px-3 py-2 text-sm font-black text-brand-deep ring-1 transition dark:text-brand-lavender"
@@ -188,7 +191,7 @@ export function DesktopNavigation({ locale }: { locale: Locale }) {
                         <ChevronDown size={14} />
                     </a>
                     <div className="invisible absolute left-0 top-full z-50 w-72 translate-y-1 pt-2 opacity-0 transition group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                        <div className="rounded-2xl border border-white/70 bg-white/95 p-2 shadow-[0_24px_70px_rgba(23,27,33,.18)] backdrop-blur-2xl dark:border-white/10 dark:bg-[#1c2128]/95">
+                        <div className="public-dropdown rounded-2xl border border-white/70 bg-white/95 p-2 shadow-[0_24px_70px_rgba(23,27,33,.18)] backdrop-blur-2xl dark:border-white/10 dark:bg-[#1c2128]/95">
                             {item.children.map(([idHref, enHref, idLabel, enLabel]) => {
                                 const href = locale === 'id' ? idHref : enHref;
                                 const external = href.startsWith('http');

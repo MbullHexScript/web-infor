@@ -117,14 +117,14 @@ export default function StudentLifeLandingPage({
             </SectionBand>
             <SectionBand>
                 <h2 className="text-2xl font-black">{hmps.name}</h2>
-                <p className="mt-2 max-w-3xl text-sm leading-7 text-brand-graphite dark:text-slate-300">
+                <p className="public-prose mt-2 max-w-3xl text-sm leading-7 text-brand-graphite dark:text-slate-300">
                     {hmps.description}
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3">
                     <HmpsExternalLink url={hmps.url} locale={locale} />
                     <Link
                         href={locale === 'en' ? '/en/admissions' : '/id/pmb'}
-                        className="rounded-md border border-brand-silver px-4 py-3 text-sm font-bold dark:border-slate-700"
+                        className="public-button-secondary rounded-md border border-brand-silver px-4 py-3 text-sm font-bold dark:border-slate-700"
                     >
                         {locale === 'en' ? 'Admissions' : 'Informasi PMB'}
                     </Link>

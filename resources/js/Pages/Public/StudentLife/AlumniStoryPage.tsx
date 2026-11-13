@@ -22,7 +22,7 @@ export default function AlumniStoryPage({
                 description={item.quote ?? undefined}
             />
             <SectionBand>
-                <p className="max-w-3xl text-sm leading-7 text-brand-graphite dark:text-slate-300">
+                <p className="public-prose max-w-3xl text-sm leading-7 text-brand-graphite dark:text-slate-300">
                     {item.story}
                 </p>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">

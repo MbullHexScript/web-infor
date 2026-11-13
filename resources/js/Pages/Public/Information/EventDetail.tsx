@@ -23,7 +23,7 @@ export default function EventDetail({
                 description={event.location ?? undefined}
             />
             <SectionBand title={locale === 'en' ? 'Event Details' : 'Detail Agenda'}>
-                <div className="mb-5 grid gap-3 rounded-md border border-brand-silver bg-white p-5 text-sm dark:border-slate-700 dark:bg-[#1c2128]">
+                <div className="public-card mb-5 grid gap-3 rounded-md border border-brand-silver bg-white p-5 text-sm dark:border-slate-700 dark:bg-[#1c2128]">
                     <EventStatusBadge status={event.status} />
                     <div>
                         {event.startAt} - {event.endAt} ({event.timezone})
@@ -35,7 +35,7 @@ export default function EventDetail({
                 <div className="mt-6 flex flex-wrap gap-3">
                     <a
                         href={event.icsUrl}
-                        className="rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
+                        className="public-button-primary rounded-md bg-brand-deep px-4 py-2 text-sm font-bold text-white"
                     >
                         ICS
                     </a>

@@ -7,14 +7,14 @@ export function AdmissionCtaSection({ locale, pmbUrl }: { locale: Locale; pmbUrl
     const external = pmbUrl.startsWith('http');
 
     return (
-        <div className="overflow-hidden rounded-[var(--radius-lg)] bg-brand-deep p-6 text-white shadow-[var(--shadow-lg)] md:p-10">
+        <div className="public-inverse overflow-hidden rounded-[var(--radius-lg)] p-7 text-white md:p-14">
             <div className="max-w-3xl">
-                <h2 className="font-heading text-3xl font-bold tracking-normal md:text-4xl">
+                <h2 className="public-section-title font-heading text-3xl font-bold tracking-normal md:text-4xl">
                     {isEnglish
                         ? 'Ready to Join the Next Generation of Digital Innovators?'
                         : 'Siap Menjadi Bagian dari Generasi Digital Masa Depan?'}
                 </h2>
-                <p className="text-white/78 mt-4 text-base leading-7">
+                <p className="mt-4 text-base leading-7 text-white/85">
                     {isEnglish
                         ? 'Discover an Informatics learning experience that integrates technology, innovation, and Islamic values.'
                         : 'Temukan pengalaman belajar Informatika yang memadukan teknologi, inovasi, dan nilai-nilai keislaman.'}
@@ -24,14 +24,14 @@ export function AdmissionCtaSection({ locale, pmbUrl }: { locale: Locale; pmbUrl
                         href={pmbUrl}
                         target={external ? '_blank' : undefined}
                         rel={external ? 'noopener noreferrer' : undefined}
-                        className="inline-flex min-h-11 items-center gap-2 rounded-[var(--radius-sm)] bg-brand-yellow px-5 py-3 text-sm font-bold text-brand-charcoal"
+                        className="inline-flex min-h-11 items-center gap-2 rounded-full bg-brand-yellow px-5 py-3 text-sm font-semibold text-[#171b21]"
                     >
                         {isEnglish ? 'Admissions Information' : 'Informasi PMB'}
                         <ArrowRight size={18} />
                     </a>
                     <Link
                         href={isEnglish ? '/en/academics/curriculum' : '/id/akademik/kurikulum'}
-                        className="inline-flex min-h-11 items-center gap-2 rounded-[var(--radius-sm)] border border-white/25 px-5 py-3 text-sm font-bold text-white"
+                        className="public-button-secondary inline-flex min-h-11 items-center gap-2 rounded-full border border-white/25 px-5 py-3 text-sm font-bold text-white"
                     >
                         {isEnglish ? 'Explore Curriculum' : 'Jelajahi Kurikulum'}
                     </Link>

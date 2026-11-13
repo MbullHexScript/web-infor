@@ -18,7 +18,7 @@ export function Footer({
     const isEnglish = locale === 'en';
 
     return (
-        <footer className="border-t border-brand-silver bg-white py-12 dark:border-slate-700 dark:bg-[#1c2128]">
+        <footer className="public-footer border-t border-brand-silver bg-white py-12 dark:border-slate-700 dark:bg-[#1c2128]">
             <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.4fr_.8fr_.8fr_1fr]">
                 <div>
                     <NavbarBrand />

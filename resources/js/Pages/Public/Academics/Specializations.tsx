@@ -28,7 +28,7 @@ export default function Specializations({
                         : 'Mahasiswa memilih satu jalur pendalaman pada semester 5 sampai 7.'
                 }
             />
-            <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+            <div className="public-section mx-auto max-w-7xl px-4 py-10 sm:px-6">
                 <SpecializationsGrid specializations={specializations} locale={locale} />
             </div>
         </AcademicShell>
